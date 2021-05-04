@@ -1,4 +1,67 @@
 h1{
-    color: red;
-    font-size: large;
+    color:dodgerblue;
+    
 }
+h5
+{
+    text-align:right;
+    text-decoration-style: underline;
+}
+
+h2{
+    color:blue;
+}
+h7
+{
+    color:slateblue;
+}
+li{
+    font-size:20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .right {
+    position: absolute;
+    right: 500px;
+    width: 300px;
+    
+    padding: 10px;
+  }
+  .userright {
+    position: absolute;
+    right: 30px;
+    width: 400px;
+    
+    padding: 20px;
+  }
+  .left{
+    position: absolute;
+    left: 580px;
+    width: 300px;
+    
+    padding: 10px;
+  }
+  .centers{
+    width: 450px;
+    clear: both;
+
+  }
+  .buttons{
+    width: 150px;
+    height:40px;
+    clear: both;
+
+  }
+  h7{
+      color:blue
+  }
+  p {
+    padding: 10px;
+    text-indent: 30px;
+    
+  }
