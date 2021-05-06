@@ -6,12 +6,12 @@ body {
     height: 100vh;
 }
 body{
-    background: black;
+    background: white;
 }  
 .main {
     height: 250px;
     width: 250px;
-    background:white;
+    background:burlywood;
     border-radius: 10px;
     display: grid;
     place-items: center;
@@ -19,7 +19,7 @@ body{
     
 }
   h1,h2{
-      color:rgb(18, 106, 221);
+      color:rgb(221, 53, 104);
   }
 
   
