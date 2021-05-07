@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/css/register.css">
+    <title>sktech.com</title>
+	<script src="/js/register.js"></script>
+	
+</head>
+<body>
+<form action="#">
+  <div id="fullpage">
+  
+    <h1><em><strong>SK TECHNOLOGIES</strong></em></h1>
+	
+	<h3>STUDENT REGISTRATION FORM</h3>
+	
+	<p>This is an application form for student registration purpose in the institute which is <em><strong>SK Technologies</strong></em>.This registration form has a list of fields that a student will input data into and Register for the course they are interested in.This forms takes the credentials from the students for registration. It holds important credentials such as the following</p>
+	
+	<table border="0"
+	    <tr>
+          <td class="label_col">First Name:</td>
+          <td class="input_col"><input name="firstName" id="firstName" type="text" onblur="validateFirstName();"></td>
+		  <td class="feedback_col"><span id="firstNamePrompt">&nbsp;</span></td>
+		</tr>
+		
+		<tr>
+          <td class="label_col">Last Name:</td>
+          <td class="input_col"><input name="lastName" id="lastName" type="text" onblur="validateLastName();"></td>
+		  <td class="feedback_col"><span id="lastNamePrompt">&nbsp;</span></td>
+		</tr>
+		
+		<tr>
+          <td class="label_col">Email Address:</td>
+          <td class="input_col"><input name="email" id="email" type="text" onblur="validateemail();" placeholder="abc123@gmail.com"></td>
+		  <td class="feedback_col"><span id="emailPrompt">&nbsp;</span></td>
+        </tr>
+		
+		<tr>
+		  <td><label for="dob">Date Of Birth:</label></td>
+          <td><input type="date" id="dob" name="dob"></td>  
+        </tr>
+		
+		<tr>
+		  <td><label for="username">Username:</label></td>
+          <td><input type="text" id="username" name="username"></td> 
+		</tr>
+		
+		<tr>
+          <td><label for="Password">Password:</label></td>
+          <td><input type="Password" id="Password" name="Password"></td>
+		</tr>
+		
+		<tr>
+          <td class="label_col">Confirm Password:</td>
+          <td class="input_col"><input name="cpass" id="cpass" input type="Password" onblur="validateCpass();"></td>
+		  <td class="feedback_col"><span id="CPassPrompt">&nbsp;</span></td>
+        </tr>
+
+		<tr>
+          <td class="label_col">Phone Number:</td>
+          <td class="input_col"><input name="phone" id="phone" type="text" onblur="validatePhone();" placeholder="xxxxxxxxxx"></td>
+		  <td class="feedback_col"><span id="phonePrompt"></span></td>
+		</tr>
+	  </table>
+  </div>  
+  <p><strong>Please select your gender:</strong></p>
+  <input type="radio" id="male" name="gender" value="male" checked>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  <p><strong>Please select your course:</strong></p>
+  <select id="course">
+  <option value="c programming">C PROGRAMMING</option>
+  <option value="c++ programming">C++ PROGRAMMING</option>
+  <option value="java">JAVA</option>
+  <option value="data structures & algorithms">DATA STRUCTURES & ALGORITHMS</option>
+  <option value="python">PYTHON</option>
+  </select>
+  <br>
+  <p><strong>Please select your interest:</strong></p>
+  <input type="checkbox" id="a" name="a" value="skill">
+  <label for="a">Gain a new skill</label><br>
+  <input type="checkbox" id="b" name="b" value="project">
+  <label for="b">Build my own project</label><br>
+  <input type="checkbox" id="c" name="c" value="internship">
+  <label for="c">Get an internship/job in future</label><br>
+  <input type="checkbox" id="d" name="d" value="Certificate">
+  <label for="d">Get a certificate</label><br>
+  <input type="checkbox" id="e" name="e" value="requirement">
+  <label for="e">To fulfill college requirement</label><br><br>
+  <input type="button" id="f" value="Register" onclick="validatebutton();"><span id="message"></span>
+</form>
+</body>
+</html>
