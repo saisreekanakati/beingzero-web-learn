@@ -1,15 +1,18 @@
 const express = require('express');
-const courseLib = require('./backend/lib/courselib');
+const mongoose = require('mongoose');
+const courselib = require('./backend/lib/courselib');
 const dbconnect=require('./backend/db/dbconnect');
 
 const app = express();
 dbconnect.connect();
+app.use(express.static(__dirname+"/frontend"));
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-
-const mongoose = require('mongoose');
-app.use(express.static(__dirname+"/frontend"));
+app.use(function(req,res,next){
+    console.log("Request came");
+    next();
+});
 
 // var password = process.env.Mongo_atlas_password;
 // var connectionString = "mongodb+srv://saisreekanakati:"+password+"@cluster0.3mite.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -32,13 +35,25 @@ app.get("/resumee", function(req, res){
 });
 
 
-app.get("/crud", function(req, res){
-    file=__dirname+"/frontend/html/crud.html";
-    res.sendFile(file);
-});
+// app.get("/crud", function(req, res){
+//     file=__dirname+"/frontend/html/crud.html";
+//     res.sendFile(file);
+// });
 
-app.get('/api/courses', courseLib.getallcourses);
-app.post('/api/courses', courseLib.createcourse);
+// app.get('/api/courses', courselib.getallcourses);
+// app.post('/api/courses',function(req,res){
+//     courselib.createcourse(req,res);
+// });
+
+app.get("/crudoperations", function(req, res){
+    let filePathName10=__dirname+"/frontend/html/crud.html"
+    res.sendFile(filePathName10);
+})
+app.get("/crud", courselib.getall);
+app.delete("/crud/:idd", courselib.deleteone);
+app.post("/crud",courselib.addnewone);
+app.put("/crud/:idd", courselib.update);
+
 
 app.get("/pie", function(req, res){
     file=__dirname+"/frontend/html/pie.html";
