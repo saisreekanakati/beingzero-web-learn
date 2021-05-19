@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 module.exports.connect = function(){
     var p=process.env.Mongo_atlas_password;
-    var connectionString = "mongodb+srv://saisreekanakati:"+p+"@cluster0.3mite.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    var connectionString = "mongodb+srv://saisreekanakati:kanna@1707@cluster0.3mite.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
     var dbops = {useUnifiedTopology: true,useNewUrlParser: true}
     mongoose.connect(connectionString,dbops);
