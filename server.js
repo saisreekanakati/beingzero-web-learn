@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const config = require('./backend/config/config');
 const courselib = require('./backend/lib/courselib');
 const dbconnect=require('./backend/db/dbconnect');
 
@@ -73,9 +74,9 @@ app.get("/register", function(req, res){
 })
 
 
-const port = process.env.PORT || 3000;
+//const port = process.env.PORT || 3000;
  
 // Start the server
-app.listen(port, function(){
-    console.log("runnig server http://localhost:"+port);
+app.listen(config.webPort, function(){
+    console.log("runnig server http://localhost:"+config.webPort);
 })
