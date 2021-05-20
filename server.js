@@ -16,12 +16,12 @@ app.use(function(req,res,next){
 });
 
 // var password = process.env.Mongo_atlas_password;
-// var connectionString = "mongodb+srv://saisreekanakati:"+password+"@cluster0.3mite.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
-// mongoose.connect(connectionString, {});
-// mongoose.connection.on('connected', function(){
-//     console.log("Database connected");
-// });
+var connectionString = config.mongoConnectionString;
+const dbops={};
+mongoose.connect(connectionString, {});
+mongoose.connection.on('connected', function(){
+    console.log("Database connected");
+});
 app.get("/", function(req, res){
     res.send("Welcome to saisree's Site");
 });
